@@ -1,0 +1,28 @@
+# Asegúrate de que el archivo de autenticación de X11 exista antes de ejecutar
+# sudo rm -rf /tmp/.docker.xauth
+# xauth nlist $DISPLAY | sed -e 's/^..../ffff/' | xauth -f /tmp/.docker.xauth nmerge -
+# xhost local:root
+services:
+  ros-humble:
+    build: .
+    container_name: ros_humble_container
+    user: ros
+    network_mode: host
+    ipc: host
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+      - XAUTHORITY=/tmp/.docker.xauth
+      - TURTLEBOT3_MODEL=burger
+    volumes:
+      - ./ros2_ws:/ros2_ws
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - /tmp/.docker.xauth:/tmp/.docker.xauth
+    privileged: true
+    runtime: nvidia
+    stdin_open: true
+    tty: true
+
+networks:
+  host:
+    external: true

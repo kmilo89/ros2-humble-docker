@@ -1,0 +1,36 @@
+docker exec -it ros_humble_container bash
+
+docker run --rm -it --user ros --network=host --ipc=host -v $PWD/source:/source_code -v /tmp/.X11-unix:/tmp/.X11-unix:rw --env=DISPLAY ros-humble
+
+
+distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
+curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+sudo apt-get update
+sudo apt-get install -y nvidia-docker2
+sudo systemctl restart docker
+
+
+
+Create Workspace ROS2
+
+sudo apt-get update
+mkdir -p ros2_ws/src
+cd ros2_ws
+colcon build 
+
+Create package
+ros2 pkg create name_package --build-type ament_python --dependencies rclpy
+ros2 pkg create --build-type ament_python <package_name>
+# in pkg folder
+#entry_points={
+#        'console_scripts': [
+#            "test_node = name_package.name_node:main"
+#        ],
+
+colcon build 
+source ~/.bashrc 
+
+Update package
+colcon build --symlink-install
+source ~/.bashrc 

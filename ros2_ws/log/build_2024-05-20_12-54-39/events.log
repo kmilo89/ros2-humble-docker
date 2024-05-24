@@ -1,0 +1,34 @@
+[0.000000] (-) TimerEvent: {}
+[0.000108] (my_robot_controller) JobQueued: {'identifier': 'my_robot_controller', 'dependencies': OrderedDict()}
+[0.001206] (my_robot_controller) JobStarted: {'identifier': 'my_robot_controller'}
+[0.099878] (-) TimerEvent: {}
+[0.200111] (-) TimerEvent: {}
+[0.300336] (-) TimerEvent: {}
+[0.400580] (-) TimerEvent: {}
+[0.432217] (my_robot_controller) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/my_robot_controller', 'build', '--build-base', '/ros2_ws/build/my_robot_controller/build', 'install', '--record', '/ros2_ws/build/my_robot_controller/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/ros2_ws/src/my_robot_controller', 'env': {'HOSTNAME': 'jclondonol-Desktop', 'GIT_ASKPASS': '/home/ros/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/ros/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/bin/helpers/browser.sh', 'HOME': '/home/ros', 'OLDPWD': '/ros2_ws/src', 'TERM_PROGRAM_VERSION': '1.89.1', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-a086114f-a3c7-47a5-96ec-c4613ea8ee05.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/ros/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/ros/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/node', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'COLCON_PREFIX_PATH': '/ros2_ws/install', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-6a4b80b6-2cf8-4d54-badb-d6b4b9dccfe5.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'QT_X11_NO_MITSHM': '1', 'PATH': '/home/ros/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/vscode-ssh-auth-6a4b80b6-2cf8-4d54-badb-d6b4b9dccfe5.sock","/tmp/.X11-unix/X2","/home/ros/.gnupg/S.gpg-agent"]', 'DISPLAY': ':1', 'LANG': 'C.UTF-8', 'XAUTHORITY': '/tmp/.docker.xauth', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-28a7b5e8af.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/vscode-ssh-auth-6a4b80b6-2cf8-4d54-badb-d6b4b9dccfe5.sock', 'AMENT_PREFIX_PATH': '/ros2_ws/install/my_robot_controller:/opt/ros/humble', 'REMOTE_CONTAINERS_DISPLAY_SOCK': '/tmp/.X11-unix/X2', 'SHELL': '/bin/bash', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/ros2_ws/build/my_robot_controller', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/ros2_ws/build/my_robot_controller/prefix_override:/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[0.500701] (-) TimerEvent: {}
+[0.600985] (-) TimerEvent: {}
+[0.602769] (my_robot_controller) StdoutLine: {'line': b'running egg_info\n'}
+[0.603432] (my_robot_controller) StdoutLine: {'line': b'writing ../../build/my_robot_controller/my_robot_controller.egg-info/PKG-INFO\n'}
+[0.603678] (my_robot_controller) StdoutLine: {'line': b'writing dependency_links to ../../build/my_robot_controller/my_robot_controller.egg-info/dependency_links.txt\n'}
+[0.603790] (my_robot_controller) StdoutLine: {'line': b'writing entry points to ../../build/my_robot_controller/my_robot_controller.egg-info/entry_points.txt\n'}
+[0.603868] (my_robot_controller) StdoutLine: {'line': b'writing requirements to ../../build/my_robot_controller/my_robot_controller.egg-info/requires.txt\n'}
+[0.603937] (my_robot_controller) StdoutLine: {'line': b'writing top-level names to ../../build/my_robot_controller/my_robot_controller.egg-info/top_level.txt\n'}
+[0.605213] (my_robot_controller) StdoutLine: {'line': b"reading manifest file '../../build/my_robot_controller/my_robot_controller.egg-info/SOURCES.txt'\n"}
+[0.605938] (my_robot_controller) StdoutLine: {'line': b"writing manifest file '../../build/my_robot_controller/my_robot_controller.egg-info/SOURCES.txt'\n"}
+[0.606093] (my_robot_controller) StdoutLine: {'line': b'running build\n'}
+[0.606175] (my_robot_controller) StdoutLine: {'line': b'running build_py\n'}
+[0.606338] (my_robot_controller) StdoutLine: {'line': b'running install\n'}
+[0.606571] (my_robot_controller) StdoutLine: {'line': b'running install_lib\n'}
+[0.607524] (my_robot_controller) StdoutLine: {'line': b'running install_data\n'}
+[0.607640] (my_robot_controller) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.608742] (my_robot_controller) StdoutLine: {'line': b"removing '/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages/my_robot_controller-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[0.608999] (my_robot_controller) StdoutLine: {'line': b'Copying ../../build/my_robot_controller/my_robot_controller.egg-info to /ros2_ws/install/my_robot_controller/lib/python3.10/site-packages/my_robot_controller-0.0.0-py3.10.egg-info\n'}
+[0.609657] (my_robot_controller) StdoutLine: {'line': b'running install_scripts\n'}
+[0.626083] (my_robot_controller) StdoutLine: {'line': b'Installing draw_circle_node script to /ros2_ws/install/my_robot_controller/lib/my_robot_controller\n'}
+[0.626288] (my_robot_controller) StdoutLine: {'line': b'Installing pose_subscriber_node script to /ros2_ws/install/my_robot_controller/lib/my_robot_controller\n'}
+[0.626382] (my_robot_controller) StdoutLine: {'line': b'Installing test_node script to /ros2_ws/install/my_robot_controller/lib/my_robot_controller\n'}
+[0.626526] (my_robot_controller) StdoutLine: {'line': b"writing list of installed files to '/ros2_ws/build/my_robot_controller/install.log'\n"}
+[0.643856] (my_robot_controller) CommandEnded: {'returncode': 0}
+[0.651490] (my_robot_controller) JobEnded: {'identifier': 'my_robot_controller', 'rc': 0}
+[0.651956] (-) EventReactorShutdown: {}

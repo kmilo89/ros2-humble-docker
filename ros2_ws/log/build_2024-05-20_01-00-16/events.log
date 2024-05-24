@@ -1,0 +1,33 @@
+[0.000000] (-) TimerEvent: {}
+[0.000567] (my_robot_controller) JobQueued: {'identifier': 'my_robot_controller', 'dependencies': OrderedDict()}
+[0.000736] (my_robot_controller) JobStarted: {'identifier': 'my_robot_controller'}
+[0.100016] (-) TimerEvent: {}
+[0.200243] (-) TimerEvent: {}
+[0.300438] (-) TimerEvent: {}
+[0.400666] (-) TimerEvent: {}
+[0.425268] (my_robot_controller) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/ros2_ws/build/my_robot_controller/build', '--no-deps', 'symlink_data', '--force'], 'cwd': '/ros2_ws/build/my_robot_controller', 'env': {'HOSTNAME': 'jclondonol-Desktop', 'GIT_ASKPASS': '/home/ros/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/extensions/git/dist/askpass.sh', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/ros/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/bin/helpers/browser.sh', 'HOME': '/home/ros', 'OLDPWD': '/ros2_ws/src', 'TERM_PROGRAM_VERSION': '1.89.1', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-e4f1be46-27fe-4eb2-9dfe-29585fe99f3a.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/home/ros/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/ros/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/node', 'COLORTERM': 'truecolor', 'REMOTE_CONTAINERS': 'true', 'COLCON_PREFIX_PATH': '/ros2_ws/install', 'ROS_DISTRO': 'humble', 'REMOTE_CONTAINERS_IPC': '/tmp/vscode-remote-containers-ipc-264b67f0-b57d-46f7-9d84-c03471ba3dd4.sock', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'QT_X11_NO_MITSHM': '1', 'PATH': '/home/ros/.vscode-server/bin/dc96b837cf6bb4af9cd736aa3af08cf8279f7685/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'REMOTE_CONTAINERS_SOCKETS': '["/tmp/vscode-ssh-auth-264b67f0-b57d-46f7-9d84-c03471ba3dd4.sock","/tmp/.X11-unix/X0","/home/ros/.gnupg/S.gpg-agent"]', 'DISPLAY': ':1', 'LANG': 'C.UTF-8', 'XAUTHORITY': '/tmp/.docker.xauth', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-28a7b5e8af.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/tmp/vscode-ssh-auth-264b67f0-b57d-46f7-9d84-c03471ba3dd4.sock', 'AMENT_PREFIX_PATH': '/ros2_ws/install/my_robot_controller:/opt/ros/humble', 'REMOTE_CONTAINERS_DISPLAY_SOCK': '/tmp/.X11-unix/X0', 'SHELL': '/bin/bash', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/ros2_ws/build/my_robot_controller', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/ros2_ws/build/my_robot_controller/prefix_override:/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[0.500784] (-) TimerEvent: {}
+[0.601014] (-) TimerEvent: {}
+[0.613463] (my_robot_controller) StdoutLine: {'line': b'running develop\n'}
+[0.614039] (my_robot_controller) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.\n'}
+[0.614138] (my_robot_controller) StderrLine: {'line': b'  warnings.warn(\n'}
+[0.701125] (-) TimerEvent: {}
+[0.715901] (my_robot_controller) StdoutLine: {'line': b'running egg_info\n'}
+[0.716126] (my_robot_controller) StdoutLine: {'line': b'writing my_robot_controller.egg-info/PKG-INFO\n'}
+[0.716320] (my_robot_controller) StdoutLine: {'line': b'writing dependency_links to my_robot_controller.egg-info/dependency_links.txt\n'}
+[0.716450] (my_robot_controller) StdoutLine: {'line': b'writing entry points to my_robot_controller.egg-info/entry_points.txt\n'}
+[0.716556] (my_robot_controller) StdoutLine: {'line': b'writing requirements to my_robot_controller.egg-info/requires.txt\n'}
+[0.716652] (my_robot_controller) StdoutLine: {'line': b'writing top-level names to my_robot_controller.egg-info/top_level.txt\n'}
+[0.717930] (my_robot_controller) StdoutLine: {'line': b"reading manifest file 'my_robot_controller.egg-info/SOURCES.txt'\n"}
+[0.718595] (my_robot_controller) StdoutLine: {'line': b"writing manifest file 'my_robot_controller.egg-info/SOURCES.txt'\n"}
+[0.719598] (my_robot_controller) StdoutLine: {'line': b'running build_ext\n'}
+[0.719747] (my_robot_controller) StdoutLine: {'line': b'Creating /ros2_ws/install/my_robot_controller/lib/python3.10/site-packages/my-robot-controller.egg-link (link to .)\n'}
+[0.720380] (my_robot_controller) StdoutLine: {'line': b'Installing test_node script to /ros2_ws/install/my_robot_controller/lib/my_robot_controller\n'}
+[0.720638] (my_robot_controller) StdoutLine: {'line': b'\n'}
+[0.720724] (my_robot_controller) StdoutLine: {'line': b'Installed /ros2_ws/build/my_robot_controller\n'}
+[0.720867] (my_robot_controller) StdoutLine: {'line': b'running symlink_data\n'}
+[0.720936] (my_robot_controller) StdoutLine: {'line': b'symbolically linking /ros2_ws/build/my_robot_controller/resource/my_robot_controller -> /ros2_ws/install/my_robot_controller/share/ament_index/resource_index/packages\n'}
+[0.720998] (my_robot_controller) StdoutLine: {'line': b'symbolically linking /ros2_ws/build/my_robot_controller/package.xml -> /ros2_ws/install/my_robot_controller/share/my_robot_controller\n'}
+[0.743693] (my_robot_controller) CommandEnded: {'returncode': 0}
+[0.752169] (my_robot_controller) JobEnded: {'identifier': 'my_robot_controller', 'rc': 0}
+[0.752515] (-) EventReactorShutdown: {}

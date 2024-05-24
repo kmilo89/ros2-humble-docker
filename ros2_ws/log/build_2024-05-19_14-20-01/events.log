@@ -1,0 +1,44 @@
+[0.000000] (-) TimerEvent: {}
+[0.000093] (my_robot_controller) JobQueued: {'identifier': 'my_robot_controller', 'dependencies': OrderedDict()}
+[0.000302] (my_robot_controller) JobStarted: {'identifier': 'my_robot_controller'}
+[0.099266] (-) TimerEvent: {}
+[0.199485] (-) TimerEvent: {}
+[0.299679] (-) TimerEvent: {}
+[0.399941] (-) TimerEvent: {}
+[0.447485] (my_robot_controller) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/my_robot_controller', 'build', '--build-base', '/ros2_ws/build/my_robot_controller/build', 'install', '--record', '/ros2_ws/build/my_robot_controller/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/ros2_ws/src/my_robot_controller', 'env': {'HOSTNAME': 'jclondonol-Desktop', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/ros', 'OLDPWD': '/ros2_ws/src', 'ROS_PYTHON_VERSION': '3', 'COLCON_PREFIX_PATH': '/ros2_ws/install', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'ROS_LOCALHOST_ONLY': '0', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':1', 'LANG': 'C.UTF-8', 'XAUTHORITY': '/tmp/.docker.xauth', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'PWD': '/ros2_ws/build/my_robot_controller', 'TURTLEBOT3_MODEL': 'burger', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/ros2_ws/build/my_robot_controller/prefix_override:/ros2_ws/install/my_robot_controller/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[0.500051] (-) TimerEvent: {}
+[0.600267] (-) TimerEvent: {}
+[0.618101] (my_robot_controller) StdoutLine: {'line': b'running egg_info\n'}
+[0.618539] (my_robot_controller) StdoutLine: {'line': b'creating ../../build/my_robot_controller/my_robot_controller.egg-info\n'}
+[0.618647] (my_robot_controller) StdoutLine: {'line': b'writing ../../build/my_robot_controller/my_robot_controller.egg-info/PKG-INFO\n'}
+[0.618762] (my_robot_controller) StdoutLine: {'line': b'writing dependency_links to ../../build/my_robot_controller/my_robot_controller.egg-info/dependency_links.txt\n'}
+[0.618899] (my_robot_controller) StdoutLine: {'line': b'writing entry points to ../../build/my_robot_controller/my_robot_controller.egg-info/entry_points.txt\n'}
+[0.618986] (my_robot_controller) StdoutLine: {'line': b'writing requirements to ../../build/my_robot_controller/my_robot_controller.egg-info/requires.txt\n'}
+[0.619055] (my_robot_controller) StdoutLine: {'line': b'writing top-level names to ../../build/my_robot_controller/my_robot_controller.egg-info/top_level.txt\n'}
+[0.619115] (my_robot_controller) StdoutLine: {'line': b"writing manifest file '../../build/my_robot_controller/my_robot_controller.egg-info/SOURCES.txt'\n"}
+[0.620282] (my_robot_controller) StdoutLine: {'line': b"reading manifest file '../../build/my_robot_controller/my_robot_controller.egg-info/SOURCES.txt'\n"}
+[0.620777] (my_robot_controller) StdoutLine: {'line': b"writing manifest file '../../build/my_robot_controller/my_robot_controller.egg-info/SOURCES.txt'\n"}
+[0.620947] (my_robot_controller) StdoutLine: {'line': b'running build\n'}
+[0.621101] (my_robot_controller) StdoutLine: {'line': b'running build_py\n'}
+[0.621177] (my_robot_controller) StdoutLine: {'line': b'creating /ros2_ws/build/my_robot_controller/build\n'}
+[0.621237] (my_robot_controller) StdoutLine: {'line': b'creating /ros2_ws/build/my_robot_controller/build/lib\n'}
+[0.621294] (my_robot_controller) StdoutLine: {'line': b'creating /ros2_ws/build/my_robot_controller/build/lib/my_robot_controller\n'}
+[0.621361] (my_robot_controller) StdoutLine: {'line': b'copying my_robot_controller/__init__.py -> /ros2_ws/build/my_robot_controller/build/lib/my_robot_controller\n'}
+[0.621422] (my_robot_controller) StdoutLine: {'line': b'running install\n'}
+[0.621476] (my_robot_controller) StdoutLine: {'line': b'running install_lib\n'}
+[0.621938] (my_robot_controller) StdoutLine: {'line': b'creating /ros2_ws/install/my_robot_controller/lib/python3.10/site-packages/my_robot_controller\n'}
+[0.622041] (my_robot_controller) StdoutLine: {'line': b'copying /ros2_ws/build/my_robot_controller/build/lib/my_robot_controller/__init__.py -> /ros2_ws/install/my_robot_controller/lib/python3.10/site-packages/my_robot_controller\n'}
+[0.622369] (my_robot_controller) StdoutLine: {'line': b'byte-compiling /ros2_ws/install/my_robot_controller/lib/python3.10/site-packages/my_robot_controller/__init__.py to __init__.cpython-310.pyc\n'}
+[0.622560] (my_robot_controller) StdoutLine: {'line': b'running install_data\n'}
+[0.622668] (my_robot_controller) StdoutLine: {'line': b'creating /ros2_ws/install/my_robot_controller/share/ament_index\n'}
+[0.622759] (my_robot_controller) StdoutLine: {'line': b'creating /ros2_ws/install/my_robot_controller/share/ament_index/resource_index\n'}
+[0.622822] (my_robot_controller) StdoutLine: {'line': b'creating /ros2_ws/install/my_robot_controller/share/ament_index/resource_index/packages\n'}
+[0.622878] (my_robot_controller) StdoutLine: {'line': b'copying resource/my_robot_controller -> /ros2_ws/install/my_robot_controller/share/ament_index/resource_index/packages\n'}
+[0.622933] (my_robot_controller) StdoutLine: {'line': b'copying package.xml -> /ros2_ws/install/my_robot_controller/share/my_robot_controller\n'}
+[0.622987] (my_robot_controller) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.624053] (my_robot_controller) StdoutLine: {'line': b'Copying ../../build/my_robot_controller/my_robot_controller.egg-info to /ros2_ws/install/my_robot_controller/lib/python3.10/site-packages/my_robot_controller-0.0.0-py3.10.egg-info\n'}
+[0.624674] (my_robot_controller) StdoutLine: {'line': b'running install_scripts\n'}
+[0.640433] (my_robot_controller) StdoutLine: {'line': b"writing list of installed files to '/ros2_ws/build/my_robot_controller/install.log'\n"}
+[0.656728] (my_robot_controller) CommandEnded: {'returncode': 0}
+[0.665330] (my_robot_controller) JobEnded: {'identifier': 'my_robot_controller', 'rc': 0}
+[0.665826] (-) EventReactorShutdown: {}
