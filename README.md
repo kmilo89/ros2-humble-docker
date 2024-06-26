@@ -1,82 +1,35 @@
 # ros2-humble-docker
 
-¡Genial! Aprender ROS 2 (Robot Operating System 2) es una excelente elección si estás interesado en la robótica y en desarrollar aplicaciones robóticas avanzadas. Aquí te dejo una guía paso a paso para comenzar con ROS 2:
+### **Setup your Workspace **
 
-### 1. **Instalación de ROS 2**
-
-Primero, necesitas instalar ROS 2 en tu sistema. Aquí hay una guía básica para instalar ROS 2 Humble Hawksbill en Ubuntu 22.04:
-
-#### Instalación de ROS 2 Humble en Ubuntu 22.04
-
-1. **Configura las fuentes de Debian**
+1. **Create a Workspace**
 
    ```sh
-   sudo apt update && sudo apt install -y curl gnupg lsb-release
-   sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
-   sudo sh -c 'echo "deb [arch=$(dpkg --print-architecture)] http://packages.ros.org/ros2/ubuntu $(lsb_release -cs) main" > /etc/apt/sources.list.d/ros2-latest.list'
-   ```
-
-2. **Instala ROS 2**
-
-   ```sh
-   sudo apt update
-   sudo apt install ros-humble-desktop
-   ```
-
-3. **Fuente el setup script**
-
-   ```sh
-   source /opt/ros/humble/setup.bash
-   ```
-
-4. **Instala dependencias adicionales**
-
-   ```sh
-   sudo apt install python3-colcon-common-extensions
-   sudo apt install python3-argcomplete
-   ```
-
-### 2. **Configura tu entorno de trabajo**
-
-1. **Crea un espacio de trabajo**
-
-   ```sh
-   mkdir -p ~/ros2_ws/src
-   cd ~/ros2_ws
+   cd /ros2_ws
    colcon build
    ```
 
-2. **Fuente el espacio de trabajo**
+2. **Source Workspace**
 
    ```sh
-   source ~/ros2_ws/install/setup.bash
+   source /ros2_ws/install/setup.bash
    ```
 
-3. **Agregar al .bashrc (opcional)**
+### **First ROS2 Node**
 
-   Para no tener que ejecutar `source` cada vez que abras una nueva terminal, puedes agregarlo a tu `.bashrc`:
+We will to create a simple package and a python node.
 
-   ```sh
-   echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
-   echo "source ~/ros2_ws/install/setup.bash" >> ~/.bashrc
-   source ~/.bashrc
-   ```
-
-### 3. **Primer Nodo en ROS 2**
-
-Vamos a crear un paquete simple y un nodo en Python.
-
-1. **Crear un nuevo paquete**
+1. **Create a new package**
 
    ```sh
-   cd ~/ros2_ws/src
+   cd /ros2_ws/src
    ros2 pkg create --build-type ament_python my_package
    cd my_package
    ```
 
-2. **Estructura del paquete**
+2. **Structure of package**
 
-   La estructura de tu paquete debería verse así:
+   The package structure should look like this::
 
    ```
    my_package/
@@ -86,6 +39,11 @@ Vamos a crear un paquete simple y un nodo en Python.
    └── my_package
        └── __init__.py
    ```
+
+
+
+
+
 
 3. **Crear un nodo Python**
 
@@ -183,3 +141,43 @@ Una vez que estés cómodo con la creación de nodos simples, puedes explorar:
 - **Integración con sensores y actuadores**: Para trabajar con hardware real.
 
 ROS 2 es una plataforma poderosa para el desarrollo de aplicaciones robóticas. A medida que avances, podrás construir sistemas más complejos y personalizar ROS 2 según tus necesidades. ¡Buena suerte en tu aprendizaje!
+
+
+# Commands
+
+docker exec -it ros_humble_container bash
+
+docker run --rm -it --user ros --network=host --ipc=host -v $PWD/source:/source_code -v /tmp/.X11-unix:/tmp/.X11-unix:rw --env=DISPLAY ros-humble
+
+
+distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
+curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+sudo apt-get update
+sudo apt-get install -y nvidia-docker2
+sudo systemctl restart docker
+
+
+
+Create Workspace ROS2
+
+sudo apt-get update
+mkdir -p ros2_ws/src
+cd ros2_ws
+colcon build 
+
+Create package
+ros2 pkg create name_package --build-type ament_python --dependencies rclpy
+ros2 pkg create --build-type ament_python <package_name>
+ - in pkg folder
+entry_points={
+        'console_scripts': [
+            "test_node = name_package.name_node:main"
+        ],
+
+colcon build 
+source ~/.bashrc 
+
+Update package
+colcon build --symlink-install
+source ~/.bashrc 
