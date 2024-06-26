@@ -27,6 +27,14 @@ We will to create a simple package and a python node.
    cd my_package
    ```
 
+   ```sh
+   ros2 pkg create name_package --build-type ament_python --dependencies rclpy
+   ros2 pkg create --build-type ament_python <package_name>
+   // Update package
+   colcon build --symlink-install
+   source ~/.bashrc 
+   ```
+
 2. **Structure of package**
 
    The package structure should look like this::
@@ -40,23 +48,18 @@ We will to create a simple package and a python node.
        └── __init__.py
    ```
 
+3. **Create Python Node**
 
-
-
-
-
-3. **Crear un nodo Python**
-
-   Crea un archivo llamado `my_node.py` en el directorio `my_package`:
+   Create a file `my_node.py` in the `my_package` directory:
 
    ```sh
    touch my_package/my_node.py
    chmod +x my_package/my_node.py
    ```
 
-4. **Escribe el código del nodo**
+4. **Write node script**
 
-   Abre `my_package/my_node.py` y agrega lo siguiente:
+   Open `my_package/my_node.py` and add the following:
 
    ```python
    import rclpy
@@ -77,9 +80,9 @@ We will to create a simple package and a python node.
        main()
    ```
 
-5. **Modifica `setup.py`**
+5. **Modify `setup.py`**
 
-   Asegúrate de que tu `setup.py` se vea así para incluir tu script:
+   Make sure your `setup.py` looks like this to include your script:
 
    ```python
    from setuptools import setup
@@ -104,46 +107,41 @@ We will to create a simple package and a python node.
    )
    ```
 
-6. **Compilar el paquete**
+6. **Compile the package **
 
    ```sh
    cd ~/ros2_ws
    colcon build
    ```
 
-7. **Fuente el espacio de trabajo**
+7. **Source of workspace**
 
    ```sh
    source install/setup.bash
    ```
 
-8. **Ejecuta el nodo**
+8. **Run node**
 
    ```sh
    ros2 run my_package my_node
    ```
 
-### 4. **Recursos Adicionales**
+### **Additional Resources**
 
-- **Documentación Oficial de ROS 2**: [https://docs.ros.org/en/foxy/index.html](https://docs.ros.org/en/humble/index.html)
-- **Tutoriales de ROS 2**: [https://index.ros.org/doc/ros2/Tutorials/](https://docs.ros.org/en/humble/Tutorials.html)
-- **Foro ROS**: [https://discourse.ros.org/](https://discourse.ros.org/)
-- **Cursos en línea**: Plataformas como Coursera, Udemy y edX tienen cursos de ROS y ROS 2.
-
-### 5. **Próximos Pasos**
-
-Una vez que estés cómodo con la creación de nodos simples, puedes explorar:
-
-- **Publicadores y suscriptores**: Aprende a enviar y recibir mensajes.
-- **Servicios y acciones**: Implementa comunicaciones más complejas.
-- **TF2**: Maneja transformaciones entre diferentes sistemas de coordenadas.
-- **SLAM y Navegación**: Para robots móviles.
-- **Integración con sensores y actuadores**: Para trabajar con hardware real.
-
-ROS 2 es una plataforma poderosa para el desarrollo de aplicaciones robóticas. A medida que avances, podrás construir sistemas más complejos y personalizar ROS 2 según tus necesidades. ¡Buena suerte en tu aprendizaje!
+- **Official ROS 2 Documentation**: [https://docs.ros.org/en/foxy/index.html](https://docs.ros.org/en/humble/index.html)
+- **ROS 2 Tutorials**: [https://index.ros.org/doc/ros2/Tutorials/](https://docs.ros.org/en/humble/Tutorials.html)
+- **ROS 2 Forum**: [https://discourse.ros.org/](https://discourse.ros.org/)
 
 
-# Commands
+
+
+
+
+
+
+
+
+### **Docker Commands**
 
 docker exec -it ros_humble_container bash
 
@@ -156,28 +154,3 @@ curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.li
 sudo apt-get update
 sudo apt-get install -y nvidia-docker2
 sudo systemctl restart docker
-
-
-
-Create Workspace ROS2
-
-sudo apt-get update
-mkdir -p ros2_ws/src
-cd ros2_ws
-colcon build 
-
-Create package
-ros2 pkg create name_package --build-type ament_python --dependencies rclpy
-ros2 pkg create --build-type ament_python <package_name>
- - in pkg folder
-entry_points={
-        'console_scripts': [
-            "test_node = name_package.name_node:main"
-        ],
-
-colcon build 
-source ~/.bashrc 
-
-Update package
-colcon build --symlink-install
-source ~/.bashrc 
