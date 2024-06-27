@@ -25,7 +25,15 @@ RUN apt-get update \
 
 RUN apt-get update \
   && apt-get -y install ros-humble-turtlebot3-simulations \
-  && apt-get install ros-humble-ros-gz \
+  && apt-get -y install ros-humble-ros-gz \
+  && apt-get -y install ros-humble-gazebo-* \
+  && apt-get -y install ros-humble-cartographer \
+  && apt-get -y install ros-humble-cartographer-ros \
+  && apt-get -y install ros-humble-navigation2 \
+  && apt-get -y install ros-humble-nav2-bringup \
+  && apt-get -y install ros-humble-dynamixel-sdk \
+  && apt-get -y install ros-humble-turtlebot3-msgs \
+  && apt-get -y install ros-humble-turtlebot3 \
   && rm -rf /var/lib/apt/lists/*
 
 # Copy the entrypoint and bashrc scripts so we have 
